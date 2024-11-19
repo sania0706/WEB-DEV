@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style type="text/css">
+    .container {
+        background-color: grey;
+        color: red;
+        display: block;
+        width: 50%;
+        text-align: center;
+        border-color: green;
+        border-width: 12px;
+        height: 150px;
+    }
+    .btn {
+        background-color: green;
+        font-size: 20px;
+        color: white;
+    }
+    </style>
+    <script type="text/javascript">
+        function calcage() {
+            var dob = document.getElementById('dt').value;
+            var today = new Date();
+            var birthDate = new Date(dob);
+            var ageInMilliseconds = today - birthDate;
+
+            var ageDate = new Date(ageInMilliseconds);
+            var years = ageDate.getUTCFullYear() - 1970;
+            var months = ageDate.getUTCMonth();
+            var days = ageDate.getUTCDate() - 1;
+            document.getElementById('p1').innerHTML = years + " years, " + months + " months, " + days + " days old";
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <input type="date" id="dt" placeholder="Enter your DOB"><br><br>
+        <input type="button" value="Calculate age" class="btn" onclick="calcage()">
+        <p id="p1"></p>
+    </div>
+</body>
+</html>

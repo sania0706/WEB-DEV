@@ -1,0 +1,27 @@
+body{
+    background-color: rgb(237, 221, 221);
+}
+H1,h2{
+    text-align: center;
+    color: rgb(95, 7, 7);
+}
+H3{
+    color: darkgreen;
+}
+.legend{
+    color: red;
+}
+.button{
+    background-color: rgb(41, 107, 238);
+    text-decoration: double;
+    border-radius: 25%;
+    opacity:1;
+    font-size: large;
+}
+.button:hover{
+    opacity: 4;
+    
+}
+.header{
+    background-color: brown;
+}
